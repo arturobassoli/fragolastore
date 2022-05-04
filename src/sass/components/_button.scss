@@ -1,0 +1,46 @@
+@use '../base' as *;
+
+
+.cta {
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--clr-black));
+  color: hsl(var(--clr-white));
+  text-decoration: none;
+  font-size: var(--fs-300);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px 25px;
+  letter-spacing: 0.05em;
+  --gap: 0.6875rem;
+};
+
+.cta-primary,
+.cta-secondary,
+.cta-tertiary {
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--clr-black));
+  color: hsl(var(--clr-white));
+  text-decoration: none;
+  font-size: var(--fs-300);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px 25px;
+  letter-spacing: 0.05em;
+  --gap: 0.6875rem;
+}
+.cta-primary svg,
+.cta-secondary svg {
+  transform: scale(1.4);
+}
+
+.cta-secondary {
+  background-color: hsl(var(--clr-gray));
+}
+
+.cta-tertiary {
+  background-color: transparent;
+  color: hsl(var(--clr-black));
+  padding: 0;
+}

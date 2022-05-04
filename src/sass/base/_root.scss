@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+:root {
+    @each $shade, $value in $colors {
+      --clr-#{$shade}: #{$value};
+    }
+
+    @each $scale, $value in $type-scale {
+      --fs-#{$scale}: #{$value};
+    }
+
+    @each $font, $value in $font-family {
+      --ff-#{$font}: #{$value};
+    }
+
+    @each $weight, $value in $font-weight {
+      --fw-#{$weight}: #{$value};
+    }
+}

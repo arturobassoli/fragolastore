@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+@each $scale, $value in $type-scale {
+  .fs-#{$scale} {
+    font-size: var(--fs-#{$scale});
+  }
+}
+
+@each $font, $value in $font-family {
+  .ff-#{$font} {
+    font-family: var(--ff-#{$font});
+  }
+}
+
+@each $weight, $value in $font-weight {
+  .fw-#{$weight} {
+    font-weight: var(--fw-#{$weight});
+  }
+}
