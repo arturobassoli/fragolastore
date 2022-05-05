@@ -1,0 +1,19 @@
+@use "../base" as *;
+@use "../abstracts" as *;
+
+.slider .container {
+  margin-top: 105px;
+
+  .swiper-wrapper {
+    margin-bottom: 54px;
+
+    @include respond(desktop) {
+      justify-content: space-around;
+    }
+  }
+
+  .swiper-slide {
+    text-align: center;
+    width: 185px;
+  }
+}
