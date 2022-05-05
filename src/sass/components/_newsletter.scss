@@ -1,0 +1,19 @@
+@use "../base" as *;
+
+.newsletter .container {
+  padding: 40px 24px;
+  --gap: 24px;
+  flex-direction: column;
+
+  h3,
+  form input {
+    margin-bottom: 40px;
+  }
+
+  #email {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--clr-black);
+    padding-bottom: 14px;
+  }
+}
