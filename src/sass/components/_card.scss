@@ -1,0 +1,70 @@
+@use "../base" as *;
+@use "../abstracts" as *;
+
+.card {
+
+  @include respond(tablet) {
+    &:nth-child(odd) .container{
+      grid-template-columns: 2fr 1fr;
+    }
+    &:nth-child(odd) .container .text {
+      grid-row: 1;
+    }
+  }
+  @include respond(desktop) {
+    &:nth-child(odd) .container{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .container {
+    margin: 48px 0 0;
+    --gap: 0;
+
+    .media {
+      height: 375px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .text {
+      --gap: 1.5rem;
+      flex-direction: column;
+      align-items: start;
+      padding: 32px 24px;
+
+      .title p {
+        margin-bottom: 8px;
+      }
+
+      * {
+        margin: 0;
+      }
+    }
+
+    @include respond(tablet) {
+      grid-template-columns: 1fr 2fr;
+      height: 800px;
+      .media {
+        height: auto;
+      }
+      .text {
+        --gap: 2rem;
+        padding-inline: 81px;
+        justify-content: center;
+        .title p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    @include respond(desktop) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
