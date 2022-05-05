@@ -1,0 +1,29 @@
+@use "../base" as *;
+
+.discount-banner {
+  align-items: center;
+  padding: 2px 24px;
+  background-color: #000;
+  span {
+    text-align: center;
+    flex-grow: 2;
+    color: #fff;
+  }
+  button {
+    border: none;
+    margin: 0;
+    background: none;
+    cursor: pointer;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:focus {
+      outline: 2px solid #fff;
+    }
+  }
+}
