@@ -1,1 +1,17 @@
-@use '../components' as *;
+@use "../components" as *;
+@use "../abstracts" as *;
+
+header {
+  .header-container {
+    padding: 10px 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+    @include respond(desktop) {
+      padding: 23px 100px;
+    }
+  }
+  .logo {
+    text-align: center;
+  }
+}
