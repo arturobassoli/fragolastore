@@ -1,0 +1,28 @@
+@use "../base" as *;
+@use "../abstracts" as *;
+
+nav {
+  a span:first-child {
+    display: none;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  @include respond(desktop) {
+    a {
+      text-decoration: none;
+      font-size: var(--fs-500);
+      font-weight: 700;
+      color: hsl(var(--clr-black));
+
+      span:first-child {
+        display: block;
+      }
+
+      span:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+}
