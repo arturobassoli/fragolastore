@@ -1,0 +1,68 @@
+@use "../base" as *;
+@use "../abstracts" as *;
+@use "sass:map";
+
+.hero .container {
+  .media {
+    height: 377px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .text {
+    --gap: 0.5rem;
+    flex-direction: column;
+    padding: 24px;
+    text-align: center;
+
+    * {
+      margin: 0;
+    }
+
+    .description {
+      display: none;
+    }
+  }
+
+  @include respond(desktop) {
+    position: relative;
+
+    .media {
+      height: 685px;
+    }
+
+    .text {
+      position: absolute;
+      bottom: 0;
+      left: 40px;
+      text-align: left;
+      width: 532px;
+      padding: 40px 54px;
+      align-items: start;
+      --gap: 0;
+
+      h1 {
+        margin-top: 10px;
+      }
+
+      .description {
+        display: block;
+        margin-top: 64px;
+      }
+
+      .cta-tertiary {
+        margin-top: 41px;
+      }
+
+      @supports (backdrop-filter: blur(8.8px)) {
+        background-color: var(--clr-white-75);
+        backdrop-filter: blur(20px);
+      }
+    }
+  }
+}
