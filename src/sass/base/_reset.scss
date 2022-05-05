@@ -80,3 +80,13 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+
+// Activate dark mode for people that prefer that
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --clr-black: hsl(0, 0%, 100%) !important;
+    --clr-light: hsl(0, 0%, 0%) !important;
+    --clr-white: hsl(0, 0%, 13%) !important;
+    --clr-white-75: hsl(0, 0%, 13%, 0.75) !important;
+  }
+} */
