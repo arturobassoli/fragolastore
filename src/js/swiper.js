@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const breakpoint = window.matchMedia("(min-width:68em)");
+  const breakpoint = window.matchMedia("(min-width:75em)");
 
   let swiper;
 

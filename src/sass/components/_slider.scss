@@ -7,7 +7,7 @@
   .swiper-wrapper {
     margin-bottom: 54px;
 
-    @include respond(desktop) {
+    @include breakpoint($bp: 75em) {
       justify-content: space-around;
     }
   }
