@@ -1,0 +1,30 @@
+@use "../base" as *;
+@use "../abstracts" as *;
+
+.social .container {
+  padding: 24px 24px 88px;
+  --gap: 8px;
+  justify-content: center;
+
+  h3 {
+    text-align: center;
+  }
+
+  .link-social {
+    --gap: 40px;
+
+    a > * {
+      color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  @include respond(desktop) {
+    grid-template-columns: auto auto;
+    --gap: 28px;
+    padding-block: 48px;
+
+    .link-social {
+      --gap: 28px;
+    }
+  }
+}
