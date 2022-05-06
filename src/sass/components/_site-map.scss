@@ -1,5 +1,11 @@
 @use "../base" as *;
 
+
+.siteMap .container {
+  flex-direction: column;
+  --gap: 0;
+}
+
 .accordion {
   background-color: var(--clr-light);
   color: var(--clr-black);

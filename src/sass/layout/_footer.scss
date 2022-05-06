@@ -22,7 +22,8 @@
     }
 
     .siteMap .container {
-      display: flex;
+      flex-direction: row;
+      --gap: 8%;
       padding-block: 8%;
 
       .accordion {
