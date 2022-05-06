@@ -33,6 +33,11 @@
   }
 }
 
+.active,
+.accordion:hover {
+  background-color: var(--clr-gray);
+}
+
 .active {
   span:last-child {
     display: block;
@@ -40,11 +45,9 @@
   span:nth-last-child(2) {
     display: none;
   }
-}
-
-.active,
-.accordion:hover {
-  background-color: var(--clr-gray);
+  &:hover {
+  opacity: .75;
+  }
 }
 
 .panel {
