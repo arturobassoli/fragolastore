@@ -1,0 +1,70 @@
+@use "../base" as *;
+
+.accordion {
+  background-color: var(--clr-light);
+  color: var(--clr-black);
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 24px;
+  border: none;
+  text-align: left;
+  outline: none;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s;
+  --gap: 1rem;
+
+  span:nth-child(2) {
+    flex-grow: 2;
+  }
+
+  span:not(:nth-child(2)) {
+    height: 20px;
+  }
+
+  span:last-child {
+    display: none;
+  }
+}
+
+.active {
+  span:last-child {
+    display: block;
+  }
+  span:nth-last-child(2) {
+    display: none;
+  }
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--clr-gray);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: var(--clr-light);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+  ul {
+    list-style: none;
+    padding: 16px 40px 24px;
+
+    li {
+      margin-top: 8px;
+    }
+
+    li:first-child {
+      display: none;
+      position: relative;
+
+      span:first-child {
+        position: absolute;
+        top: 4px;
+        left: -32px;
+      }
+    }
+  }
+}
