@@ -3,9 +3,11 @@
 
 .slider .container {
   margin-top: 105px;
+  user-select: none;
 
   .swiper-wrapper {
     margin-bottom: 54px;
+    --gap: 0;
 
     @include breakpoint($bp: 75em) {
       justify-content: space-around;

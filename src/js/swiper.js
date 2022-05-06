@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  // Define breakpoint
   const breakpoint = window.matchMedia("(min-width:75em)");
 
   let swiper;
@@ -19,7 +20,7 @@
     swiper = new Swiper(".swiper", {
       slidesPerView: 'auto',
       loop: true,
-      spaceBetween: 30,
+      // spaceBetween: 30,
       freeMode: true,
       keyboardControl: true,
       grabCursor: true,
