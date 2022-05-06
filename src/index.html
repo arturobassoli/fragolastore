@@ -105,8 +105,8 @@
             <p class="fs-200 fw-500 uppercase">Tag</p>
             <h1 class="fs-800 fw-700">Title</h1>
             <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas et
-              non laoreet vulputate interdum facilisis.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+              et non laoreet vulputate interdum facilisis.
             </p>
             <a class="cta cta-tertiary flex" href="#"
               ><span class="button-text">Discover the selection</span
@@ -315,13 +315,13 @@
           </div>
         </div>
       </section>
-      <div class="newslette-siteMap-container grid">
-        <section class="newsletter bg-white">
+      <div class="newslette-siteMap-container bg-white grid">
+        <section class="newsletter">
           <div class="container flex">
             <h3 class="fs-600 fw-700">
               Keep you informed about news, trends, and special offers.
             </h3>
-            <form method="post">
+            <form method="post" class="flex">
               <input
                 type="email"
                 name="email"
@@ -358,89 +358,141 @@
         </section>
         <section class="siteMap">
           <div class="container">
-            <div class="list">
-              <div class="list-title">
-                <div class="icon text-black">
-                  <svg
-                    width="20"
-                    height="16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12 2c5 .6 8 5 8 10v1H0v-1c0-2.7.8-5.2 2.4-7A8.4 8.4 0 0 1 8 2a2 2 0 1 1 4 0ZM2 11h16c-.4-4-3-7-7-7H9c-2.2 0-4 .9-5.1 2.3A8.5 8.5 0 0 0 2 11Zm18 5H0v-2h20v2Z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="fw-700">May we help you?</h3>
-                <div class="open-list text-black">
-                  <svg
-                    width="20"
-                    height="20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M11 9h9v2h-9v9H9v-9H0V9h9V0h2v9Z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="list-items">
-                <ul>
-                  <li>Find my order</li>
-                  <li>FAQ</li>
-                  <li>Product care</li>
-                  <li>Shipping</li>
-                  <li>Payment</li>
-                  <li>Contact us</li>
-                </ul>
-              </div>
+            <button class="accordion flex">
+              <span>
+                <svg
+                  width="20"
+                  height="16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 2c5 .6 8 5 8 10v1H0v-1c0-2.7.8-5.2 2.4-7A8.4 8.4 0 0 1 8 2a2 2 0 1 1 4 0ZM2 11h16c-.4-4-3-7-7-7H9c-2.2 0-4 .9-5.1 2.3A8.5 8.5 0 0 0 2 11Zm18 5H0v-2h20v2Z"
+                  /></svg
+              ></span>
+              <span> <h3>May we help you?</h3> </span>
+              <span>
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11 9h9v2h-9v9H9v-9H0V9h9V0h2v9Z"
+                  /></svg
+              ></span>
+              <span>
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11 9h9v2H0V9Z"
+                  /></svg
+              ></span>
+            </button>
+            <div class="panel">
+              <ul>
+                <li>
+                  <span>
+                    <svg
+                      width="20"
+                      height="16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 2c5 .6 8 5 8 10v1H0v-1c0-2.7.8-5.2 2.4-7A8.4 8.4 0 0 1 8 2a2 2 0 1 1 4 0ZM2 11h16c-.4-4-3-7-7-7H9c-2.2 0-4 .9-5.1 2.3A8.5 8.5 0 0 0 2 11Zm18 5H0v-2h20v2Z"
+                      /></svg
+                  ></span>
+                  <span>
+                    <h3>May we help you?</h3>
+                  </span>
+                </li>
+                <li>Find my order</li>
+                <li>FAQ</li>
+                <li>Product care</li>
+                <li>Shipping</li>
+                <li>Payment</li>
+                <li>Contact us</li>
+              </ul>
             </div>
-            <div class="list">
-              <div class="list-title">
-                <div class="icon text-black">
-                  <svg
-                    width="20"
-                    height="20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.5 6.3 10 0l1.5 6.3 5.6-3.4-3.4 5.6L20 10l-6.3 1.5 3.4 5.6-5.6-3.4L10 20l-1.5-6.3-5.6 3.4 3.4-5.6L0 10l6.3-1.5-3.4-5.6 5.6 3.4Z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="fw-700">Company</h3>
-                <div class="open-list text-black">
-                  <svg
-                    width="20"
-                    height="20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M11 9h9v2h-9v9H9v-9H0V9h9V0h2v9Z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="list-items">
-                <ul>
-                  <li>#DiscoverBrandName</li>
-                  <li>Catalogs</li>
-                  <li>For professionals</li>
-                  <li>Hotel & Restaurants</li>
-                  <li>Arcturus Group</li>
-                  <li>Work with us</li>
-                </ul>
-              </div>
+            <button class="accordion flex">
+              <span>
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.5 6.3 10 0l1.5 6.3 5.6-3.4-3.4 5.6L20 10l-6.3 1.5 3.4 5.6-5.6-3.4L10 20l-1.5-6.3-5.6 3.4 3.4-5.6L0 10l6.3-1.5-3.4-5.6 5.6 3.4Z"
+                  /></svg
+              ></span>
+              <span> <h3>Company</h3> </span>
+              <span>
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11 9h9v2h-9v9H9v-9H0V9h9V0h2v9Z"
+                  /></svg
+              ></span>
+              <span>
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11 9h9v2H0V9Z"
+                  /></svg
+              ></span>
+            </button>
+            <div class="panel">
+              <ul>
+                <li>
+                  <span>
+                    <svg
+                      width="20"
+                      height="20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.5 6.3 10 0l1.5 6.3 5.6-3.4-3.4 5.6L20 10l-6.3 1.5 3.4 5.6-5.6-3.4L10 20l-1.5-6.3-5.6 3.4 3.4-5.6L0 10l6.3-1.5-3.4-5.6 5.6 3.4Z"
+                      /></svg
+                  ></span>
+                  <span>
+                    <h3>Company</h3>
+                  </span>
+                </li>
+                <li>#DiscoverBrandName</li>
+                <li>Catalogs</li>
+                <li>For professionals</li>
+                <li>Hotel & Restaurants</li>
+                <li>Arcturus Group</li>
+                <li>Work with us</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -588,5 +640,8 @@
     <!-- Swiper -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
+
+    <!-- Accordion -->
+    <script src="js/accordion.js"></script>
   </body>
 </html>

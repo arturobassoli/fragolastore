@@ -1,0 +1,45 @@
+@use "../components" as *;
+@use "../abstracts" as *;
+
+.newslette-siteMap-container {
+  --gap: 0;
+
+  @include respond(tablet) {
+    .newsletter .container {
+      padding: 8% 12%;
+
+      form {
+        flex-direction: row;
+      }
+    }
+  }
+
+  @include respond(desktop) {
+    grid-template-columns: 1fr 1fr;
+
+    .newsletter .container {
+      padding: 8% 12%;
+    }
+
+    .siteMap .container {
+      display: flex;
+      padding-block: 8%;
+
+      .accordion {
+        display: none;
+      }
+
+      .panel {
+        padding: 0 18px;
+        background-color: transparent;
+        max-height: 100%;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+
+        li:first-child {
+          display: block;
+        }
+      }
+    }
+  }
+}
