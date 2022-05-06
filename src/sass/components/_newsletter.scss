@@ -2,13 +2,13 @@
 
 .newsletter .container {
   padding: 40px 24px;
-  --gap: 24px;
+  --gap: 3rem;
   flex-direction: column;
 
-  h3,
   form {
     flex-direction: column;
     align-items: start;
+    --gap: 0;
 
     input {
       margin-bottom: 40px;
