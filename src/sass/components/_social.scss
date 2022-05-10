@@ -13,8 +13,63 @@
   .link-social {
     --gap: 40px;
 
-    a > * {
-      color: rgba(0, 0, 0, 0);
+    a {
+      position: relative;
+
+      * {
+        transition: 0.2s;
+      }
+
+      svg {
+        fill: var(--clr-white);
+        position: relative;
+      }
+
+      &:nth-child(-n + 2) svg,
+      &:nth-child(4) svg {
+        fill: var(--clr-black);
+      }
+
+      &:nth-child(3) svg,
+      &:nth-child(n + 5) svg {
+        stroke: var(--clr-black);
+      }
+
+      &:before {
+        content: "";
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 150%;
+        background-color: var(--clr-white);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-43%, -100%);
+        transition: 0.2s;
+      }
+
+      &:hover {
+        &:before {
+          transform: scale(4) translate(-12%, -24%);
+          background-color: var(--clr-black);
+        }
+
+        svg {
+          fill: var(--clr-black);
+          position: relative;
+        }
+
+        &:nth-child(-n + 2) svg,
+        &:nth-child(4) svg {
+          fill: var(--clr-white);
+        }
+
+        &:nth-child(3) svg,
+        &:nth-child(n + 5) svg {
+          stroke: var(--clr-white);
+          z-index: 9;
+        }
+      }
     }
   }
 
