@@ -61,16 +61,25 @@
 
       li {
         margin-top: 8px;
-      }
 
-      li:first-child {
-        display: none;
-        position: relative;
+        &:first-child {
+          display: none;
+          position: relative;
 
-        span:first-child {
-          position: absolute;
-          top: 4px;
-          left: -32px;
+          span:first-child {
+            position: absolute;
+            top: 4px;
+            left: -32px;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: var(--clr-black);
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
