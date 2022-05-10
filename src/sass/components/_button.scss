@@ -13,16 +13,44 @@
   letter-spacing: 0.05em;
   --gap: 0.6875rem;
   border: none;
+  transition: 0.2s;
+  outline-offset: .2rem;
+  cursor: pointer;
+
+  &:hover svg {
+    padding-left: 0.5rem;
+  }
+
+  &-primary {
+    border: 2px solid var(--clr-black);
+
+    &:hover {
+      background-color: var(--clr-white);
+      color: var(--clr-black);
+    }
+  }
 
   &-secondary {
     background-color: var(--clr-gray);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--clr-black);
+      color: var(--clr-white);
+    }
   }
   &-tertiary {
     background-color: transparent;
     color: var(--clr-black);
     padding: 0;
+
+    &:hover {
+      opacity: 0.75;
+    }
   }
   & svg {
     transform: scale(1.4);
+    transition: 0.2s;
+    overflow: visible;
   }
 }
