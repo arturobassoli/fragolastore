@@ -12,6 +12,13 @@
 
     input {
       margin-bottom: 40px;
+
+      &:focus {
+          box-shadow: none;
+/*           outline: 1px solid var(--clr-black); */
+          outline-offset: .2rem;
+          text-shadow: none;
+        }
     }
   }
 
