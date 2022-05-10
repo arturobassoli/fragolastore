@@ -8,10 +8,6 @@ nav {
       position: relative;
       overflow: hidden;
 
-      &:hover {
-        opacity: 0.75;
-      }
-
       &::after {
         content: "";
         position: absolute;
