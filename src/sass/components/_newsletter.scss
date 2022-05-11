@@ -12,6 +12,8 @@
 
     input {
       margin-bottom: 40px;
+      background-color: var(--clr-white);
+      color: var(--clr-black);
 
       &:focus {
           box-shadow: none;
