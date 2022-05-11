@@ -1,0 +1,152 @@
+@use "../base" as *;
+@use "../abstracts" as *;
+
+.products-list {
+  .title {
+    padding: 24px 24px 16px;
+
+    @include respond(desktop) {
+      text-align: center;
+    }
+  }
+
+  .controls {
+    padding: 24px;
+    justify-content: space-between;
+
+    .icon {
+      display: none;
+    }
+
+    @include respond(desktop) {
+      .icon {
+        display: block;
+      }
+    }
+  }
+}
+
+ul.products {
+  list-style: none;
+  padding: 0;
+  grid-template-columns: repeat(2, 1fr);
+  --gap: 1px;
+
+  @include respond(desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  li {
+    .product-media {
+      height: 50vw;
+      overflow: hidden;
+      align-items: center;
+      position: relative;
+
+      .on-image {
+        > * {
+          position: absolute;
+        }
+
+        > span {
+          z-index: 0;
+
+          &:nth-child(1) {
+            top: 10px;
+            left: 10px;
+          }
+
+          &:nth-child(2) {
+            top: 10px;
+            right: 10px;
+          }
+
+          &:nth-child(3) {
+            bottom: 10px;
+            left: 10px;
+          }
+
+          &:nth-child(1)::before,
+          &:nth-child(3)::before {
+            content: "";
+            width: 31px;
+            height: 12px;
+            background-color: var(--clr-white);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.2s;
+            z-index: -1;
+            border-radius: 12%;
+          }
+          &:nth-child(3)::before {
+            width: 21px;
+          }
+        }
+
+        span.wishlist {
+          span:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .product-info {
+      padding: 19px 10px;
+      flex-direction: column;
+      --gap: 40px;
+
+      .description > *:first-child {
+        margin-bottom: 10px;
+      }
+
+      .price {
+        padding: 12px 8px;
+        justify-content: space-between;
+        background-color: var(--clr-white);
+      }
+    }
+
+    @include respond(desktop) {
+      .product-media {
+        height: 25vw;
+
+        .on-image {
+          > span {
+            &:nth-child(1) {
+              top: 16px;
+              left: 16px;
+            }
+
+            &:nth-child(2) {
+              top: 16px;
+              right: 16px;
+            }
+
+            &:nth-child(3) {
+              bottom: 16px;
+              left: 16px;
+            }
+
+            &:nth-child(1)::before,
+            &:nth-child(3)::before {
+              content: none;
+            }
+          }
+        }
+      }
+
+      .product-info {
+        padding: 35px 16px;
+
+        .price {
+          padding: 0px;
+          justify-content: space-between;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
