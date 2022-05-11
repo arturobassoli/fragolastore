@@ -4,6 +4,17 @@
 .privacy-policy .container {
   padding: 32px 32px 50px;
   text-align: center;
+  background-color: #000;
+  color: #fff;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   @include respond(tablet) {
     padding-block: 18px;
     text-align: center;
