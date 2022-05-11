@@ -67,7 +67,6 @@
         &:nth-child(3) svg,
         &:nth-child(n + 5) svg {
           stroke: var(--clr-white);
-          z-index: 9;
         }
       }
     }
