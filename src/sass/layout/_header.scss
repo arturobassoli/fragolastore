@@ -2,10 +2,15 @@
 @use "../abstracts" as *;
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
   .header-container {
     padding: 10px 40px;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.05);
 
     @include respond(desktop) {
       padding: 23px 100px;
