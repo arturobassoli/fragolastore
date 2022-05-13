@@ -2,8 +2,9 @@
 @use "../abstracts" as *;
 
 .slider .container {
-  margin-top: 105px;
+  padding-top: 105px;
   user-select: none;
+  background-color: var(--clr-light);
 
   .swiper-wrapper {
     margin-bottom: 54px;
