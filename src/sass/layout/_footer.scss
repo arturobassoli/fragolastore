@@ -31,6 +31,10 @@
         display: none;
       }
 
+      span:last-child {
+        display: block;
+      }
+
       .panel {
         padding: 0 18px;
         background-color: transparent;
