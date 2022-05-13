@@ -2,7 +2,7 @@
   "use strict";
 
   // Define breakpoint
-  const breakpoint = window.matchMedia("(min-width:75em)");
+  const breakpoint = window.matchMedia("(min-width:48em)");
 
   let swiper;
 
@@ -17,13 +17,17 @@
   };
 
   const enableSwiper = function () {
-    swiper = new Swiper(".swiper", {
-      slidesPerView: 'auto',
-      loop: true,
-      // spaceBetween: 30,
-      freeMode: true,
+    swiper = new Swiper(".swiper2", {
+      slidesPerView: 1,
+      loop: false,
+      freeMode: false,
       keyboardControl: true,
       grabCursor: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
     });
   };
 

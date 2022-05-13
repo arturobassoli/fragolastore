@@ -1,0 +1,145 @@
+@use "../base" as *;
+@use "../abstracts" as *;
+
+.breadcrumbs .container {
+  align-items: center;
+  padding: 28px 40px;
+  display: none;
+
+  @include respond(tablet) {
+    display: flex;
+  }
+
+  svg {
+    transform: rotate(180deg);
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    * {
+      font-size: var(--fs-200);
+      color: var(--clr-black);
+      font-weight: var(--fw-700);
+      text-decoration: none;
+    }
+  }
+}
+
+.product > .container {
+  @include respond(tablet) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "gallery action"
+      "description description";
+
+    .gallery {
+      grid-area: gallery;
+    }
+
+    .action {
+      grid-area: action;
+    }
+
+    .description {
+      grid-area: description;
+    }
+  }
+
+  @include respond(desktop) {
+    grid-template-areas:
+      "gallery action"
+      "description action";
+  }
+
+  .swiper2 {
+    height: 100vw;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        justify-content: center;
+        align-items: center;
+
+        img {
+          min-height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      @include respond(tablet) {
+        display: grid;
+        gap: 2px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        .swiper-slide {
+          aspect-ratio: 1;
+        }
+      }
+    }
+
+    .swiper-pagination {
+      top: auto;
+      bottom: 0;
+      background: transparent;
+
+      span {
+        background-color: var(--clr-black);
+      }
+    }
+  }
+
+  .action {
+    padding: 24px;
+    flex-direction: column;
+    --gap: 24px;
+  }
+
+  .description .container {
+    flex-direction: column;
+    --gap: 0;
+
+    @include respond(tablet) {
+      padding: 40px 80px;
+    }
+
+    .accordion {
+      span:nth-child(1) {
+        flex-grow: 2;
+      }
+
+      span:not(:nth-child(1)) {
+        height: 20px;
+      }
+
+      span:last-child {
+        display: none;
+      }
+    }
+    .active,
+    .accordion:hover {
+      background-color: var(--clr-gray);
+    }
+
+    .active {
+      span:last-child {
+        display: block;
+      }
+
+      span:nth-last-child(2) {
+        display: none;
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+
+    .panel {
+      background-color: var(--clr-white);
+    }
+  }
+}

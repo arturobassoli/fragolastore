@@ -331,7 +331,7 @@
                 placeholder="Insert your email and get -5% discount"
                 required
               />
-              <button class="cta cta-secondary flex" type="submit">
+              <button class="cta cta-secondary flex" type="submit" data-micromodal-trigger="modal-1">
                 <span class="button-text">Send</span
                 ><span class="button-icon"
                   ><svg
@@ -597,7 +597,29 @@
       </section>
     </footer>
 
+    <!-- [1] -->
+    <div id="modal-1" class="modal modal-backdrop" aria-hidden="true">
+      <!-- [2] -->
+      <div tabindex="-1" data-micromodal-close>
+        <!-- [3] -->
+        <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal-wrapper">
+          <header>
+            <h2 id="modal-1-title">Modal Title</h2>
+
+            <!-- [4] -->
+            <button aria-label="Close modal" data-micromodal-close>X</button>
+          </header>
+
+          <div id="modal-1-content">Modal Content</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Script -->
+
+    <!-- Micromodal -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="js/modal.js"></script>
 
     <!-- Swiper -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
