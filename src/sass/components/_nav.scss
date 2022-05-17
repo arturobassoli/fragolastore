@@ -3,7 +3,7 @@
 
 nav {
   a {
-    span:first-child {
+    > span:first-child {
       display: none;
       position: relative;
       overflow: hidden;
@@ -26,8 +26,25 @@ nav {
       }
     }
 
-    .active::after {
+    svg {
+      fill: var(--clr-black);
+    }
+
+    .active-text::after {
       transform: translate3d(0, 0, 0) !important;
+    }
+
+    svg:nth-child(3) {
+      display: none;
+    }
+
+    .active-logo {
+      svg:nth-child(2) {
+        display: none;
+      }
+      svg:nth-child(3) {
+        display: block;
+      }
     }
   }
   ul {
